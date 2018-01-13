@@ -1,0 +1,66 @@
+=====Node========
+The node command actually starts up the node server invoking the file specified as the main program.
+
+Command: 
+node  filepath/filenameOfMainProgram
+
+Example: 
+node  ./src/main.js
+=================
+
+======NPM========
+NPM is the Node Package Manager. NPM is used to install, configure and run packages. 
+Your code is also a package that will be handled by the package manager.
+
+Commands:
+npm init 
+--------
+The npm init command creates (initializes) a new node project. 
+The init command asks basic questions about the project 
+such as the name, description, main program file (entry point), 
+git repo, author, license, etc. 
+This commands creates a package.json for the application. 
+Inside of the package.json file created by npm init, there is a section for scripts.
+This section holds scripts used by node under certain commands. 
+
+Example:
+name: (first node) first-node
+version: (0.0.0)
+description: Our first node project
+entry point: (index.js) main.js
+test command: 
+git repository:
+keywords: NPM Node Intro
+author: Cody Van De Mark
+license: (ISC) Proprietary 
+
+
+npm start
+--------
+The npm start command fires the start script inside of the package.json file.
+By default this command does not do anything. You have to add a start script to the package.json file.
+
+For example inside of the package.json, your start script might look like this.
+"scripts": {
+  "start": "node ./src/index.js",
+  "pretest": "eslint  ./src  --fix",
+  "test": "echo \"Tests complete\"
+}
+  
+In this case, the start script above would fire when the npm start command is run. 
+
+npm test
+=================
+The npm test command kicks off the pretest and test scripts inside of the package.json file.
+By default, this command does not do anything. You have to add test and pretest 
+scripts to the package.json file.
+
+For example inside of the package.json, your start script might look like this.
+"scripts": {
+  "start": "node ./src/index.js",
+  "pretest": "eslint  ./src  --fix",
+  "test": "echo \"Tests complete\"
+}
+  
+In this case, the test script above would fire the pretest script and run eslint against the src folder
+and then run the test script (which in the above example just prints "tests complete".
