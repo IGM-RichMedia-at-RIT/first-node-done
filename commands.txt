@@ -47,7 +47,7 @@ For example inside of the package.json, your start script might look like this.
   "test": "echo \"Tests complete\"
 }
   
-In this case, the start script above would fire when the npm start command is run. 
+In this case, the start script above would fire when the 'npm start' command is run. 
 
 npm test
 =================
