@@ -20,7 +20,7 @@
   "author": "Cody Van De Mark",
   "license": "ISC",
   "dependencies": {
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "eslint": "^6.2.1",
