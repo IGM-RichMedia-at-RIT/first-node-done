@@ -65,15 +65,19 @@ const onRequest = (request, response) => {
   response.end();
 };
 
-// call the http module's createServer function with a request callback & listen on port 8000.
-// Normally this would be port 80, 443 or 8080, but in this example we use 8000 to prevent
-// conflicting with local machine traffic
-http.createServer(onRequest).listen(port);
+// call the http module's createServer function with our onRequest function. The onRequest function
+// will be used to handle any incoming requests to our server. We then tell the server to listen to
+// our defined port (3000 on dev, something else on heroku). It will watch that port for requests and
+// send them into the onRequest function. The callback of the .listen() function gets called once the
+// server is running and listening to the port provided.
+http.createServer(onRequest).listen(port, () => {
+    console.log(`Server running at 127.0.0.1:${port}`);
+});
 
 // Example of a module pulled into scope
 // create an array
 const myArray = [1, 2, 3, 4, 5];
-//Use the underscore library's "chunk" function to break the array up into pieces no greater than 3 elements long.
+// Use the underscore library's "chunk" function to break the array up into pieces no greater than 3 elements long.
 const chunked = _.chunk(myArray, 3);
 console.dir(chunked);
 
