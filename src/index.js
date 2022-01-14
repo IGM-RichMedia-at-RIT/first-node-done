@@ -73,9 +73,9 @@ http.createServer(onRequest).listen(port);
 // Example of a module pulled into scope
 // create an array
 const myArray = [1, 2, 3, 4, 5];
-// use the underscore module's contains function to find out if the number 3 is in the array given
-const found = _.contains(myArray, 3);
-console.log(found);
+//Use the underscore library's "chunk" function to break the array up into pieces no greater than 3 elements long.
+const chunked = _.chunk(myArray, 3);
+console.dir(chunked);
 
 // pulling in the myData class and testing its exports
 // print out the message and getMessage function from the class
