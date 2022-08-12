@@ -19,12 +19,12 @@
   ],
   "author": "Cody Van De Mark",
   "license": "ISC",
-  "dependencies": {
-    "underscore": "^1.9.1"
-  },
   "devDependencies": {
-    "eslint": "^6.2.1",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0"
+  },
+  "dependencies": {
+    "underscore": "^1.13.4"
   }
 }
